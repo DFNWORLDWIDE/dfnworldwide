@@ -24,8 +24,7 @@ DFN Worldwide is a South African independent creative company founded by Suave M
 - Fully self-contained (single file version)
 
 ## Live Website
-[Visit DFN Worldwide](https://your-netlify-url.netlify.app)  
-*(Link will be updated after deployment)*
+[Visit DFN WORLDWIDE](https://dfnworldwide.netlify.app)
 
 ## License
 © 2026 DFN Worldwide Pty Ltd. All Rights Reserved.
