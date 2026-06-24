@@ -10,7 +10,7 @@ const DFN_CONFIG = {
     name: "DFN Worldwide",
     legalName: "DFN Worldwide PTY Ltd",
     regNumber: "2026/408693/07",
-    tagline: "Discipline From Nothing",
+    tagline: "From Nothing, Build Everything",
     artist: "Suave Melodies",
     founder: "Suave",
     location: "Tembisa, Gauteng, South Africa",
@@ -46,7 +46,7 @@ const DFN_CONFIG = {
     {
       id: "studio",
       code: "DFN-01",
-      name: "DFN Studio",
+      name: "DFN WORLDWIDE RECORDS",
       role: "Record Label",
       desc: "Original amapiano production under the artist name Suave Melodies. Every release is built, mixed, registered, and distributed in-house — single, EP, mixtape, album.",
       status: "ACTIVE",
@@ -66,7 +66,7 @@ const DFN_CONFIG = {
     {
       id: "fashion",
       code: "DFN-03",
-      name: "DFN Fashion",
+      name: "DFN WORLDWIDE DESIGNS",
       role: "Apparel & Merch",
       desc: "Apparel carrying the DFN identity — built for people who are building something from nothing too. Print-on-demand rollout in progress.",
       status: "IN PROGRESS",
@@ -76,7 +76,7 @@ const DFN_CONFIG = {
     {
       id: "dev",
       code: "DFN-04",
-      name: "DFN Dev System",
+      name: "DFN WORLDWIDE DEVS",
       role: "Software & Tools",
       desc: "The systems behind the system — this website, the Discipline Tracker app, and the internal tools that keep every division running.",
       status: "ACTIVE",
