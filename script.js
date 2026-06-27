@@ -25,7 +25,7 @@ const DFN = {
   beatstars:    'https://www.beatstars.com/suavemelodies',
 
   // Store
-  gumroad:      'https://suavemelodies.gumroad.com',
+  gumroad:      'https://dfnworldwide.gumroad.com/l/bsawq',
   kdpBook:      '#',   // UPDATE when KDP page is live
   etsy:         '#',   // UPDATE when Etsy store is live
 
