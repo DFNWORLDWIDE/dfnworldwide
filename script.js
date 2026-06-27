@@ -18,7 +18,7 @@ const DFN = {
   github:       'https://dfnworldwide.github.io/dfnworldwide',
 
   // Music — update when live on each platform
-  spotify:      '#',   // UPDATE: https://open.spotify.com/artist/...
+  spotify:      'https://open.spotify.com/user/31orpyszlrk4ivbqq6n3zcfczdie?si=oIy8F3-zQByu85MWBjKTuA',   // UPDATE: https://open.spotify.com/artist/...
   appleMusic:   '#',   // UPDATE when live
   amazonMusic:  '#',   // UPDATE when live
   bandlab:      'https://www.bandlab.com/suavemelodies',
