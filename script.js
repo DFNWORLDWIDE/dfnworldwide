@@ -38,7 +38,7 @@ const DFN = {
   // 1. Go to formspree.io → New Form
   // 2. Paste the form URL here
   // 3. Forms are free up to 50 submissions/month
-  formAction:   'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID',
+  formAction:   'https://formspree.io/f/maqgbydo',
 };
 
 /* ── DOM READY ──────────────────────────────────────────────── */
