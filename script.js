@@ -17,11 +17,11 @@ const DFN = {
   youtube:       'https://youtube.com/@DFNWorldwide',
   twitter:       'https://twitter.com/DFNWorldwide',
   facebook:      'https://facebook.com/DFNWorldwide',
-  linkedin:      'https://www.linkedin.com/in/suavemelodies',
+  linkedin:      'https://www.linkedin.com/in/suave-melodies-00b02739b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   github:        'https://github.com/dfnworldwide',
 
   // ── MUSIC ──  (update when live on platforms)
-  spotify:       '#',
+  spotify:       'https://open.spotify.com/user/31orpyszlrk4ivbqq6n3zcfczdie?si=WEfIOqH5TUGKDohlaLqyig',
   appleMusic:    '#',
   amazonMusic:   '#',
   audiomack:     'https://audiomack.com/suavemelodies',
@@ -29,7 +29,7 @@ const DFN = {
   beatstars:     'https://www.beatstars.com/suavemelodies',
 
   // ── PRODUCTS ──
-  gumroad:       'https://suavemelodies.gumroad.com',
+  gumroad:       'https://dfnworldwide.gumroad.com/l/bsawq',
   kdpBook:       '#',   // update when KDP live
   etsy:          '#',   // update when Etsy store live
 
