@@ -39,7 +39,7 @@ const DFN = {
   whatsapp:      'https://wa.me/27836821802',
 
   // ── DROP DATES ──
-  nextDrop:      new Date('2026-09-23T00:00:00+02:00'), // Rise Experience
+  nextDrop:      new Date('2026-07-23T00:00:00+02:00'), // Rise Experience
 };
 
 /* ── MODAL DATA ─────────────────────────────────────────────── */
