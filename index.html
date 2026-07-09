@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFN Worldwide | From Nothing, Build Everything</title>
+  <meta name="description" content="DFN Worldwide PTY Ltd — South African multimedia company. Music, books, design, technology. Three landmark drops in 2026. Built from nothing in Tembisa.">
+  <meta name="keywords" content="DFN Worldwide, Suave Melodies, DFNCHALLENGE, DFNSTORY, DFNLEGACY, Discipline From Nothing, Amapiano, South Africa, Tembisa">
+  <meta property="og:title" content="DFN Worldwide | From Nothing, Build Everything">
+  <meta property="og:description" content="Three landmark drops in 2026. Music. Books. Design. Technology.">
+  <meta property="og:image" content="https://dfnworldwide.com/assets/images/dfnchallenge.webp">
+  <meta property="og:url" content="https://dfnworldwide.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DFNWorldwide">
+  <link rel="icon" type="image/webp" href="assets/images/logo1.webp">
+  <link rel="apple-touch-icon" href="assets/images/logo1.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@200;300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-overlay" id="page-overlay"></div>
+
+<!-- NAVIGATION -->
+<header id="site-header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo" aria-label="DFN Worldwide Home">
+      <img src="assets/images/logo1.webp" alt="DFN Worldwide" width="36" height="36" onerror="this.style.display='none'">
+      <span>DFN WORLDWIDE</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="pages/records.html">Records</a></li>
+        <li><a href="pages/publishing.html">Publishing</a></li>
+        <li><a href="pages/designs.html">Designs</a></li>
+        <li><a href="pages/devs.html">Devs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#join" class="btn btn-gold">Enter the Movement</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="pages/records.html">Records</a>
+    <a href="pages/publishing.html">Publishing</a>
+    <a href="pages/designs.html">Designs</a>
+    <a href="pages/devs.html">Devs</a>
+    <a href="#contact">Contact</a>
+    <a href="#join" class="t-gold">Enter the Movement &rarr;</a>
+  </nav>
+</header>
+
+<!-- COUNTDOWN BANNER -->
+<div class="countdown-banner" id="countdown-banner">
+  <div class="countdown-inner">
+    <span class="countdown-label">The Rise Experience &mdash;</span>
+    <div class="countdown-units">
+      <div class="countdown-unit"><span class="countdown-num" id="cd-days">00</span><span class="countdown-unit-label">Days</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-hrs">00</span><span class="countdown-unit-label">Hrs</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-min">00</span><span class="countdown-unit-label">Min</span></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-unit"><span class="countdown-num" id="cd-sec">00</span><span class="countdown-unit-label">Sec</span></div>
+    </div>
+    <span class="countdown-label">&mdash; Sep 23, 2026</span>
+  </div>
+  <button class="countdown-close" id="countdown-close" aria-label="Close">&times;</button>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-label="Hero">
+  <div class="hero-bg" id="hero-bg" role="presentation"></div>
+  <div class="hero-overlay" role="presentation"></div>
+  <div class="hero-glow"    role="presentation"></div>
+  <div class="particles"   id="particles"  role="presentation"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <span class="hero-tag-dot" aria-hidden="true"></span>
+      DFN Worldwide PTY Ltd &nbsp;&middot;&nbsp; Est. 2026 &nbsp;&middot;&nbsp; Tembisa, SA &nbsp;&middot;&nbsp; Reg. 2026/408693/07
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-line1">FROM NOTHING,</span>
+      <span class="hero-line2">BUILD <span class="gold-word">EVERYTHING</span></span>
+    </h1>
+    <p class="hero-sub">Music &nbsp;&middot;&nbsp; Books &nbsp;&middot;&nbsp; Design &nbsp;&middot;&nbsp; Technology &nbsp;&middot;&nbsp; Legacy</p>
+    <div class="btn-group hero-actions">
+      <a href="https://dfnworldwide.gumroad.com/l/bsawq" class="btn btn-gold" target="_blank" rel="noopener">&#x2193; Free Book</a>
+      <a href="pages/records.html" class="btn btn-outline">&#9834; Stream Music</a>
+    </div>
+    <div class="email-form" id="hero-form" role="form" aria-label="Join the movement">
+      <input type="email" id="hero-email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+      <button type="button" id="hero-submit">Join Now</button>
+    </div>
+    <p class="form-note">Free. No spam. You get the Reset System book instantly.</p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>THE RESET EXPERIENCE &mdash; JULY 23, 2026 &mdash; LIVE NOW</span><span class="marquee-dot">&#9670;</span>
+    <span>THE RISE EXPERIENCE &mdash; SEPTEMBER 23, 2026</span><span class="marquee-dot">&#9670;</span>
+    <span>THE LEGACY EXPERIENCE &mdash; NOVEMBER 23, 2026</span><span class="marquee-dot">&#9670;</span>
+    <span>DFN WORLDWIDE PTY LTD &mdash; REG. 2026/408693/07</span><span class="marquee-dot">&#9670;</span>
+    <span>SAMRO &middot; CAPASSO &middot; SAMPRA &middot; SOUNDEXCHANGE</span><span class="marquee-dot">&#9670;</span>
+    <span>THE RESET EXPERIENCE &mdash; JULY 23, 2026 &mdash; LIVE NOW</span><span class="marquee-dot">&#9670;</span>
+    <span>THE RISE EXPERIENCE &mdash; SEPTEMBER 23, 2026</span><span class="marquee-dot">&#9670;</span>
+    <span>THE LEGACY EXPERIENCE &mdash; NOVEMBER 23, 2026</span><span class="marquee-dot">&#9670;</span>
+    <span>DFN WORLDWIDE PTY LTD &mdash; REG. 2026/408693/07</span><span class="marquee-dot">&#9670;</span>
+    <span>SAMRO &middot; CAPASSO &middot; SAMPRA &middot; SOUNDEXCHANGE</span><span class="marquee-dot">&#9670;</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div id="stats" aria-label="Company statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><span class="stat-num" data-count="4" data-suffix="+">4+</span><span class="stat-label">PRO Registrations</span></div>
+      <div class="stat-item"><span class="stat-num" data-count="4">4</span><span class="stat-label">Active Divisions</span></div>
+      <div class="stat-item"><span class="stat-num" data-count="3">3</span><span class="stat-label">EP Drops 2026</span></div>
+      <div class="stat-item"><span class="stat-num" data-count="40" data-suffix="+">40+</span><span class="stat-label">Global Stores</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="t-eyebrow">The Company</p>
+        <div class="gold-rule"></div>
+        <h2 id="about-heading" class="section-title t-display mb-md">A Creative Empire<br>Built on Discipline</h2>
+        <p class="t-dim mb-md" style="font-size:1.05rem;line-height:1.85;">
+          DFN Worldwide is not just a brand. It is a registered South African multimedia company built
+          from nothing in Tembisa, Gauteng &mdash; operating across music, publishing, design, and
+          technology under one unifying principle: discipline defeats circumstance, every time.
+        </p>
+        <p class="t-dim" style="font-size:1.05rem;line-height:1.85;">
+          Every product, every platform, every intellectual property asset is owned entirely by
+          DFN Worldwide PTY Ltd. No label deals. No publisher advances. No external dependency.
+        </p>
+        <div class="pillars mt-lg">
+          <a href="pages/records.html" class="pillar"><span class="pillar-icon">&#9834;</span><span class="pillar-text">DFN Worldwide Records</span></a>
+          <a href="pages/publishing.html" class="pillar"><span class="pillar-icon">&#128216;</span><span class="pillar-text">DFN Worldwide Publishing</span></a>
+          <a href="pages/designs.html" class="pillar"><span class="pillar-icon">&#128085;</span><span class="pillar-text">DFN Worldwide Designs</span></a>
+          <a href="pages/devs.html" class="pillar"><span class="pillar-icon">&#9889;</span><span class="pillar-text">DFN Worldwide Devs</span></a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="reg-card">
+          <div class="reg-card-label">Official Company Registration</div>
+          <div class="reg-card-title t-display">DFN Worldwide PTY Ltd</div>
+          <div class="reg-row"><span class="reg-key">Registration No.</span><span class="reg-val">2026/408693/07</span></div>
+          <div class="reg-row"><span class="reg-key">Registered With</span><span class="reg-val">CIPC &amp; SARS</span></div>
+          <div class="reg-row"><span class="reg-key">Date Registered</span><span class="reg-val">24 May 2026</span></div>
+          <div class="reg-row"><span class="reg-key">Location</span><span class="reg-val">Tembisa, Gauteng, SA</span></div>
+          <div class="reg-row"><span class="reg-key">Music Rights</span><span class="reg-val">SAMRO &middot; CAPASSO &middot; SAMPRA</span></div>
+          <div class="reg-row"><span class="reg-key">Digital Rights</span><span class="reg-val">SoundExchange &middot; RouteNote</span></div>
+          <div class="reg-row"><span class="reg-key">Status</span><span class="reg-val live">Active &amp; Tax Registered</span></div>
+          <div class="div-tags mt-md">
+            <a href="pages/records.html" class="div-tag">Records</a>
+            <a href="pages/publishing.html" class="div-tag">Publishing</a>
+            <a href="pages/designs.html" class="div-tag">Designs</a>
+            <a href="pages/devs.html" class="div-tag">Devs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE EXPERIENCES -->
+<section id="experiences" class="section-pad" style="background:var(--dark-alt);border-top:1px solid rgba(201,168,76,0.1);" aria-labelledby="exp-heading">
+  <div class="container">
+    <div class="t-center reveal mb-lg">
+      <p class="t-eyebrow">The Release Calendar</p>
+      <div class="gold-rule gold-rule--center"></div>
+      <h2 id="exp-heading" class="section-title t-display">Three Experiences.<br>One Trilogy.</h2>
+      <p class="t-dim mt-sm" style="max-width:560px;margin:1rem auto 0;">Every drop on the 23rd is a complete multi-product experience. Music, words, and culture released together.</p>
+    </div>
+    <div class="experience-grid reveal">
+
+      <div class="experience-card is-live" role="button" tabindex="0" onclick="openModal('reset')" onkeydown="if(event.key==='Enter')openModal('reset')">
+        <span class="badge-pill badge-live">Live Now &mdash; July 23, 2026</span>
+        <div class="experience-date mt-sm">The Reset Experience</div>
+        <div class="experience-title t-display">The Blueprint</div>
+        <ul class="experience-products">
+          <li><a href="pages/records.html">DFNCHALLENGE EP</a><span class="pdiv">DFN Records &middot; 3 Tracks</span></li>
+          <li><a href="https://dfnworldwide.gumroad.com/l/bsawq" target="_blank" rel="noopener">The Reset System</a><span class="pdiv">DFN Publishing &middot; Free</span></li>
+        </ul>
+      </div>
+
+      <div class="experience-card" role="button" tabindex="0" onclick="openModal('rise')" onkeydown="if(event.key==='Enter')openModal('rise')">
+        <span class="badge-pill badge-soon">September 23, 2026</span>
+        <div class="experience-date mt-sm">The Rise Experience</div>
+        <div class="experience-title t-display">The System</div>
+        <ul class="experience-products">
+          <li><a href="pages/records.html">DFNSTORY EP</a><span class="pdiv">DFN Records &middot; 6 Tracks</span></li>
+          <li><a href="pages/publishing.html">The System That Forces You To Win</a><span class="pdiv">DFN Publishing &middot; Premium</span></li>
+          <li><a href="pages/designs.html">DFN Worldwide Hoodie</a><span class="pdiv">DFN Designs &middot; First Drop</span></li>
+        </ul>
+      </div>
+
+      <div class="experience-card" role="button" tabindex="0" onclick="openModal('legacy')" onkeydown="if(event.key==='Enter')openModal('legacy')">
+        <span class="badge-pill badge-announced">November 23, 2026</span>
+        <div class="experience-date mt-sm">The Legacy Experience</div>
+        <div class="experience-title t-display">The Legacy</div>
+        <ul class="experience-products">
+          <li><a href="pages/records.html">DFNLEGACY EP</a><span class="pdiv">DFN Records &middot; 8 Tracks</span></li>
+          <li><a href="pages/publishing.html">Artist Bible</a><span class="pdiv">DFN Publishing</span></li>
+          <li><a href="pages/devs.html">DFN Artist System</a><span class="pdiv">DFN Devs &middot; App</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIVISIONS -->
+<section id="divisions" class="section-pad" aria-labelledby="div-heading">
+  <div class="container">
+    <div class="divisions-header reveal">
+      <p class="t-eyebrow">The Four Divisions</p>
+      <div class="gold-rule"></div>
+      <h2 id="div-heading" class="section-title t-display">Four Engines.<br>One Empire.</h2>
+    </div>
+  </div>
+  <div class="divisions-grid reveal">
+    <a href="pages/records.html" class="division-card" aria-label="DFN Worldwide Records">
+      <div class="division-bg" style="background-image:url('assets/images/records.webp')" role="presentation"></div>
+      <div class="division-overlay"></div>
+      <div class="division-content">
+        <span class="division-code">DFN-01</span>
+        <h3 class="division-name t-display">DFN Worldwide<br>Records</h3>
+        <p class="division-desc">Amapiano and cinematic production. Three EP drops in 2026. SAMRO &middot; CAPASSO &middot; SAMPRA &middot; SoundExchange. 40+ stores globally.</p>
+        <span class="division-status status-active">Active</span>
+      </div>
+    </a>
+    <a href="pages/publishing.html" class="division-card" aria-label="DFN Worldwide Publishing">
+      <div class="division-bg" style="background-image:url('assets/images/publishing.webp')" role="presentation"></div>
+      <div class="division-overlay"></div>
+      <div class="division-content">
+        <span class="division-code">DFN-02</span>
+        <h3 class="division-name t-display">DFN Worldwide<br>Publishing</h3>
+        <p class="division-desc">The Discipline From Nothing series. Three books across the 2026 trilogy. The Reset System is live and free now.</p>
+        <span class="division-status status-active">Active</span>
+      </div>
+    </a>
+    <a href="pages/designs.html" class="division-card" aria-label="DFN Worldwide Designs">
+      <div class="division-bg" style="background-image:url('assets/images/designs.webp')" role="presentation"></div>
+      <div class="division-overlay"></div>
+      <div class="division-content">
+        <span class="division-code">DFN-03</span>
+        <h3 class="division-name t-display">DFN Worldwide<br>Designs</h3>
+        <p class="division-desc">Apparel and lifestyle built for the man who is building. DFN Hoodie drops September 23. Wear the philosophy.</p>
+        <span class="division-status status-building">Launching Sep 2026</span>
+      </div>
+    </a>
+    <a href="pages/devs.html" class="division-card" aria-label="DFN Worldwide Devs">
+      <div class="division-bg" style="background-image:url('assets/images/devs.webp')" role="presentation"></div>
+      <div class="division-overlay"></div>
+      <div class="division-content">
+        <span class="division-code">DFN-04</span>
+        <h3 class="division-name t-display">DFN Worldwide<br>Devs</h3>
+        <p class="division-desc">Website, Discipline Tracker (live), and DFN Artist System app launching November 2026. Built in-house. Zero dependency.</p>
+        <span class="division-status status-active">Active</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- PRODUCT SLIDER -->
+<section id="products-slider" class="slider-section section-pad" aria-labelledby="slider-heading">
+  <div class="container">
+    <div class="slider-header reveal">
+      <div>
+        <p class="t-eyebrow">All Products</p>
+        <div class="gold-rule"></div>
+        <h2 id="slider-heading" class="section-title t-display">The DFN Universe.</h2>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="slider-prev" aria-label="Previous">&#8592;</button>
+        <button class="slider-btn" id="slider-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+    <div class="slider-track-wrap reveal">
+      <div class="slider-track" id="slider-track">
+
+        <div class="slider-card" onclick="openModal('ep1')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <img src="assets/images/dfnchallenge.webp" alt="DFNCHALLENGE EP" loading="lazy" onerror="this.style.display='none'">
+            <div class="slider-card-placeholder">DFNCHALLENGE</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Records &middot; <span style="color:#4CAF50">Live Now</span></div>
+            <div class="slider-card-title t-display">DFNCHALLENGE EP</div>
+            <div class="slider-card-desc">3 tracks &middot; Amapiano &middot; July 23, 2026</div>
+            <span class="badge-pill badge-live mt-sm" style="display:inline-block">Stream Now</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="openModal('ep2')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <div class="slider-card-placeholder" style="background:linear-gradient(135deg,#0d1400,#080808)">DFNSTORY</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Records &middot; Sep 23, 2026</div>
+            <div class="slider-card-title t-display">DFNSTORY EP</div>
+            <div class="slider-card-desc">6 tracks &middot; Amapiano &middot; The Rise Experience</div>
+            <span class="badge-pill badge-soon mt-sm" style="display:inline-block">Coming Sep 23</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="openModal('ep3')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <div class="slider-card-placeholder" style="background:linear-gradient(135deg,#100a00,#080808)">DFNLEGACY</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Records &middot; Nov 23, 2026</div>
+            <div class="slider-card-title t-display">DFNLEGACY EP</div>
+            <div class="slider-card-desc">8 tracks &middot; Amapiano &middot; The Legacy Experience</div>
+            <span class="badge-pill badge-announced mt-sm" style="display:inline-block">Coming Nov 23</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="window.open('https://dfnworldwide.gumroad.com/l/bsawq','_blank')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <img src="assets/images/publishing.webp" alt="The Reset System" loading="lazy" onerror="this.style.display='none'">
+            <div class="slider-card-placeholder">THE RESET SYSTEM</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Publishing &middot; <span style="color:#4CAF50">Free Now</span></div>
+            <div class="slider-card-title t-display">The Reset System</div>
+            <div class="slider-card-desc">8 chapters &middot; Free eBook &middot; Gumroad &amp; KDP</div>
+            <span class="badge-pill badge-live mt-sm" style="display:inline-block">Download Free</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="openModal('book2')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <div class="slider-card-placeholder" style="background:linear-gradient(135deg,#0d0a00,#080808)">THE FULL SYSTEM</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Publishing &middot; Sep 23, 2026</div>
+            <div class="slider-card-title t-display">The System That Forces You To Win</div>
+            <div class="slider-card-desc">16 chapters &middot; Premium &middot; Rise Experience</div>
+            <span class="badge-pill badge-soon mt-sm" style="display:inline-block">Join Waitlist</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="window.location.href='pages/designs.html'" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <img src="assets/images/designs.webp" alt="DFN Hoodie" loading="lazy" onerror="this.style.display='none'">
+            <div class="slider-card-placeholder">DFN HOODIE</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Designs &middot; Sep 23, 2026</div>
+            <div class="slider-card-title t-display">DFN Worldwide Hoodie</div>
+            <div class="slider-card-desc">First Drop &middot; Limited Run &middot; ~R650</div>
+            <span class="badge-pill badge-soon mt-sm" style="display:inline-block">Rise Experience</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="openModal('book3')" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <div class="slider-card-placeholder" style="background:linear-gradient(135deg,#0a0700,#080808)">ARTIST BIBLE</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Publishing &middot; Nov 23, 2026</div>
+            <div class="slider-card-title t-display">Artist Bible</div>
+            <div class="slider-card-desc">Independent artist operating manual</div>
+            <span class="badge-pill badge-announced mt-sm" style="display:inline-block">Legacy Experience</span>
+          </div>
+        </div>
+
+        <div class="slider-card" onclick="window.location.href='pages/devs.html'" role="button" tabindex="0">
+          <div class="slider-card-img">
+            <img src="assets/images/devs.webp" alt="DFN Artist System" loading="lazy" onerror="this.style.display='none'">
+            <div class="slider-card-placeholder" style="background:linear-gradient(135deg,#00040d,#080808)">ARTIST SYSTEM</div>
+          </div>
+          <div class="slider-card-body">
+            <div class="slider-card-division">DFN Devs &middot; Nov 23, 2026</div>
+            <div class="slider-card-title t-display">DFN Artist System</div>
+            <div class="slider-card-desc">App for independent artists &middot; Legacy Experience</div>
+            <span class="badge-pill badge-announced mt-sm" style="display:inline-block">Coming Nov 23</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="slider-dots reveal" id="slider-dots" aria-label="Product navigation"></div>
+  </div>
+</section>
+
+<!-- RISE EXPERIENCE PREVIEW -->
+<section class="section-pad" style="background:var(--dark);border-top:1px solid rgba(201,168,76,0.06);" aria-labelledby="rise-heading">
+  <div class="container">
+    <div class="reveal mb-lg t-center">
+      <p class="t-eyebrow">September 23, 2026</p>
+      <div class="gold-rule gold-rule--center"></div>
+      <h2 id="rise-heading" class="section-title t-display">The Rise Experience</h2>
+      <p class="t-dim mt-sm">Three products. One night. The second chapter of the trilogy.</p>
+    </div>
+    <div class="preview-grid reveal">
+      <div class="preview-card">
+        <div class="preview-card-date">DFN Worldwide Records &middot; 6 Tracks</div>
+        <div class="preview-card-title t-display">DFNSTORY EP</div>
+        <p class="t-dim" style="font-size:0.88rem;margin-bottom:1rem;">Six tracks documenting what the discipline costs and what it builds. The sound of the rise &mdash; raw, honest, earned.</p>
+        <div class="preview-tracklist">
+          <div class="preview-track"><span class="preview-track-num">01</span><span class="preview-track-name">My Son&apos;s Will Know</span></div>
+          <div class="preview-track"><span class="preview-track-num">02</span><span class="preview-track-name">Nothing Was Given</span></div>
+          <div class="preview-track"><span class="preview-track-num">03</span><span class="preview-track-name">Pressure Made Me</span></div>
+          <div class="preview-track"><span class="preview-track-num">04</span><span class="preview-track-name">I Choose The Grind</span></div>
+          <div class="preview-track"><span class="preview-track-num">05</span><span class="preview-track-name">Zero Excuses</span></div>
+          <div class="preview-track"><span class="preview-track-num">06</span><span class="preview-track-name">DFN STORY II</span></div>
+        </div>
+        <a href="#join" class="btn btn-outline mt-md" style="width:fit-content">Get Notified &rarr;</a>
+      </div>
+      <div class="preview-card">
+        <div class="preview-card-date">DFN Publishing &amp; DFN Designs</div>
+        <div class="preview-card-title t-display">The Full System &amp; The Hoodie</div>
+        <p class="t-dim" style="font-size:0.88rem;margin-bottom:1.5rem;">The 16-chapter premium book lands the same night as the DFNSTORY EP and the first DFN Worldwide Hoodie drop.</p>
+        <div class="preview-tracklist">
+          <div class="preview-track"><span class="preview-track-name">&#128216; The System That Forces You To Win</span><span class="preview-track-status">16 Ch.</span></div>
+          <div class="preview-track"><span class="preview-track-name">&#128085; DFN Worldwide Signature Hoodie</span><span class="preview-track-status">~R650</span></div>
+          <div class="preview-track"><span class="preview-track-name">&#9834; DFNSTORY EP (6 Tracks)</span><span class="preview-track-status">Amapiano</span></div>
+        </div>
+        <div class="btn-group mt-md">
+          <a href="pages/publishing.html" class="btn btn-gold">Books &rarr;</a>
+          <a href="pages/designs.html" class="btn btn-outline">Merch &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="section-pad" style="background:var(--dark-alt);border-top:1px solid rgba(201,168,76,0.06);" aria-labelledby="phil-heading">
+  <div class="container">
+    <div class="t-center reveal">
+      <p class="t-eyebrow">The Philosophy</p>
+      <div class="gold-rule gold-rule--center"></div>
+      <h2 id="phil-heading" class="section-title t-display">Discipline From Nothing</h2>
+    </div>
+    <div class="values-grid reveal">
+      <div class="value-card"><div class="value-num">01</div><div class="value-name">Discipline</div></div>
+      <div class="value-card"><div class="value-num">02</div><div class="value-name">Ownership</div></div>
+      <div class="value-card"><div class="value-num">03</div><div class="value-name">Execution</div></div>
+      <div class="value-card"><div class="value-num">04</div><div class="value-name">Legacy</div></div>
+      <div class="value-card"><div class="value-num">05</div><div class="value-name">Freedom</div></div>
+    </div>
+    <div class="manifesto-block reveal">
+      <span class="manifesto-quote" aria-hidden="true">&ldquo;</span>
+      <p>We believe discipline is the foundation of all power.</p>
+      <p>We believe greatness is built, not given.</p>
+      <p>We reject excuses. We reject wasted potential.</p>
+      <p>We rebuild ourselves daily.</p>
+      <div class="manifesto-attr">&mdash; Suave Melodies &nbsp;&middot;&nbsp; DFN Worldwide</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder" class="section-pad" aria-labelledby="founder-heading">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-portrait-wrap reveal">
+        <div class="founder-frame">
+          <img src="assets/images/background1.webp" alt="Suave Melodies" loading="lazy" onerror="this.style.display='none'">
+          <div class="founder-name-wrap">
+            <div class="founder-role">Founder &amp; CEO</div>
+            <div class="founder-name t-display">Suave Melodies</div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-content reveal reveal-delay-2">
+        <p class="t-eyebrow">About the Founder</p>
+        <div class="gold-rule"></div>
+        <h2 id="founder-heading" class="section-title t-display mb-md">Artist. Author.<br>System Builder. CEO.</h2>
+        <p class="founder-bio-p">Suave Melodies is an independent creator from Tembisa, South Africa. He built DFN Worldwide from nothing &mdash; no external investment, no industry connections, no team. A registered company with four active divisions, three EP drops, three books, and a tech arm &mdash; all built by one person with one philosophy.</p>
+        <p class="founder-bio-p">The Discipline From Nothing philosophy was forged under real pressure: single-parent upbringing, financial hardship, depression, and fatherhood. He did not study these conditions from the outside. He built inside them.</p>
+        <div class="credentials">
+          <div class="credential">Founder &amp; CEO &mdash; DFN Worldwide PTY Ltd</div>
+          <div class="credential">SAMRO &middot; CAPASSO &middot; SAMPRA &middot; SoundExchange</div>
+          <div class="credential">Author &mdash; Discipline From Nothing Series</div>
+          <div class="credential">Producer &mdash; DFNCHALLENGE &middot; DFNSTORY &middot; DFNLEGACY</div>
+          <div class="credential">Tembisa, Gauteng, South Africa</div>
+        </div>
+        <div class="btn-group mt-md">
+          <a href="https://www.linkedin.com/in/suavemelodies" class="btn btn-gold" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/suavemelodies" class="btn btn-outline" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://youtube.com/@DFNWorldwide" class="btn btn-ghost" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS & MEDIA -->
+<section id="press" class="section-pad" style="background:var(--dark);border-top:1px solid rgba(201,168,76,0.06);" aria-labelledby="press-heading">
+  <div class="container">
+    <div class="reveal mb-lg">
+      <p class="t-eyebrow">Press &amp; Media</p>
+      <div class="gold-rule"></div>
+      <h2 id="press-heading" class="section-title t-display">For the Press.</h2>
+    </div>
+    <div class="press-grid">
+      <div class="reveal">
+        <div class="press-kit-card">
+          <div class="press-kit-title t-display">DFN Worldwide<br>Media Kit</div>
+          <p class="t-dim" style="font-size:0.88rem;line-height:1.8;margin-bottom:1.2rem;">Everything journalists, bloggers, and media need to cover DFN Worldwide, Suave Melodies, or any of the three 2026 experiences.</p>
+          <div class="press-kit-contents">
+            <div class="press-kit-item">Company profile &amp; registration details</div>
+            <div class="press-kit-item">Founder bio &mdash; long form &amp; 150-word press version</div>
+            <div class="press-kit-item">High-resolution logo files (PNG, SVG, WebP)</div>
+            <div class="press-kit-item">EP cover art for all three releases</div>
+            <div class="press-kit-item">Book cover images (all three titles)</div>
+            <div class="press-kit-item">Press release &mdash; The Reset Experience</div>
+            <div class="press-kit-item">ISRCs, UPCs, and complete music metadata</div>
+            <div class="press-kit-item">Brand guidelines &amp; usage rules</div>
+          </div>
+          <div class="press-stat-row">
+            <div class="press-stat-cell"><div class="press-stat-num">4</div><div class="press-stat-lbl">PRO Reg.</div></div>
+            <div class="press-stat-cell"><div class="press-stat-num">40+</div><div class="press-stat-lbl">Stores</div></div>
+            <div class="press-stat-cell"><div class="press-stat-num">3</div><div class="press-stat-lbl">EP Drops</div></div>
+            <div class="press-stat-cell"><div class="press-stat-num">3</div><div class="press-stat-lbl">Books</div></div>
+          </div>
+          <a href="mailto:dfnworldwide@gmail.com?subject=DFN%20Worldwide%20Media%20Kit%20Request" class="btn btn-gold btn-full">Request Media Kit</a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="press-contacts">
+          <div class="press-contact-card"><div class="press-contact-role">Press &amp; Media Contact</div><div class="press-contact-name">Suave Melodies</div><div class="press-contact-name" style="font-size:0.82rem;color:var(--muted)">Founder &amp; CEO, DFN Worldwide PTY Ltd</div><a href="mailto:dfnworldwide@gmail.com" class="press-contact-email">dfnworldwide@gmail.com</a></div>
+          <div class="press-contact-card"><div class="press-contact-role">Playlist &amp; Sync Enquiries</div><div class="press-contact-name">DFN Worldwide Records</div><a href="mailto:dfnworldwide@gmail.com?subject=Playlist%2FSync%20Enquiry" class="press-contact-email">dfnworldwide@gmail.com</a></div>
+          <div class="press-contact-card"><div class="press-contact-role">Interview &amp; Feature Requests</div><div class="press-contact-name">Available: podcast, written, video</div><a href="mailto:dfnworldwide@gmail.com?subject=Interview%20Request" class="press-contact-email">dfnworldwide@gmail.com</a></div>
+          <div class="press-contact-card"><div class="press-contact-role">Book Review &amp; ARC Requests</div><div class="press-contact-name">DFN Worldwide Publishing</div><a href="mailto:dfnworldwide@gmail.com?subject=Book%20Review%20Request" class="press-contact-email">dfnworldwide@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS & PARTNERSHIPS -->
+<section id="sponsors" class="section-pad" style="background:var(--black);border-top:1px solid rgba(201,168,76,0.06);" aria-labelledby="sponsors-heading">
+  <div class="container">
+    <div class="reveal mb-lg">
+      <p class="t-eyebrow">Partnerships &amp; Sponsorships</p>
+      <div class="gold-rule"></div>
+      <h2 id="sponsors-heading" class="section-title t-display">Build With Us.</h2>
+      <p class="t-dim mt-sm" style="font-size:1rem;line-height:1.85;max-width:580px;">DFN Worldwide is building a global audience of men aged 18&ndash;40 in South Africa and the African diaspora. Brands aligned with discipline, ownership, and African excellence belong in this ecosystem.</p>
+    </div>
+    <div class="partner-tiers reveal">
+      <div class="partner-tier">
+        <div class="tier-badge">Tier 1</div>
+        <div class="tier-name t-display">Brand Partner</div>
+        <div class="tier-perks">
+          <div class="tier-perk">Logo on DFN Worldwide website</div>
+          <div class="tier-perk">Social media mentions</div>
+          <div class="tier-perk">Product inclusion in drops</div>
+          <div class="tier-perk">DFN newsletter feature</div>
+        </div>
+        <a href="mailto:dfnworldwide@gmail.com?subject=Brand%20Partner%20Enquiry" class="btn btn-ghost btn-full mt-lg">Enquire</a>
+      </div>
+      <div class="partner-tier featured">
+        <div class="tier-badge">Tier 2 &mdash; Recommended</div>
+        <div class="tier-name t-display">Experience Sponsor</div>
+        <div class="tier-perks">
+          <div class="tier-perk">Everything in Brand Partner</div>
+          <div class="tier-perk">Named in EP liner notes</div>
+          <div class="tier-perk">Named in book acknowledgments</div>
+          <div class="tier-perk">Exclusive drop event presence</div>
+          <div class="tier-perk">Custom content collaboration</div>
+        </div>
+        <a href="mailto:dfnworldwide@gmail.com?subject=Experience%20Sponsor%20Enquiry" class="btn btn-gold btn-full mt-lg">Enquire</a>
+      </div>
+      <div class="partner-tier">
+        <div class="tier-badge">Tier 3</div>
+        <div class="tier-name t-display">Empire Partner</div>
+        <div class="tier-perks">
+          <div class="tier-perk">Full ecosystem integration</div>
+          <div class="tier-perk">Co-branded products</div>
+          <div class="tier-perk">Long-term strategic partnership</div>
+          <div class="tier-perk">Revenue share opportunities</div>
+          <div class="tier-perk">Exclusive per category</div>
+        </div>
+        <a href="mailto:dfnworldwide@gmail.com?subject=Empire%20Partner%20Enquiry" class="btn btn-outline btn-full mt-lg">Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad" style="background:var(--dark-alt);border-top:1px solid var(--gold-border);" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="reveal mb-lg">
+      <p class="t-eyebrow">Get in Touch</p>
+      <div class="gold-rule"></div>
+      <h2 id="contact-heading" class="section-title t-display">Contact DFN Worldwide.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-item"><span class="contact-icon">&#9993;</span><div><span class="contact-label">Email</span><a href="mailto:dfnworldwide@gmail.com" class="contact-value">dfnworldwide@gmail.com</a></div></div>
+        <div class="contact-item"><span class="contact-icon">&#128241;</span><div><span class="contact-label">WhatsApp</span><a href="https://wa.me/27836821802" class="contact-value" target="_blank" rel="noopener">+27 83 682 1802</a></div></div>
+        <div class="contact-item"><span class="contact-icon">&#128188;</span><div><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/suavemelodies" class="contact-value" target="_blank" rel="noopener">linkedin.com/in/suavemelodies</a></div></div>
+        <div class="contact-item"><span class="contact-icon">&#127758;</span><div><span class="contact-label">Website</span><a href="https://dfnworldwide.com" class="contact-value">dfnworldwide.com</a></div></div>
+        <div class="contact-item"><span class="contact-icon">&#128205;</span><div><span class="contact-label">Location</span><span class="contact-value">Tembisa, Gauteng, South Africa</span></div></div>
+        <div class="contact-item"><span class="contact-icon">&#128196;</span><div><span class="contact-label">Registration</span><span class="contact-value">DFN Worldwide PTY Ltd &middot; Reg. 2026/408693/07</span></div></div>
+        <p class="t-eyebrow mt-lg mb-md">Follow Everywhere</p>
+        <div class="social-grid-full">
+          <a href="https://instagram.com/suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#128247;</span>Instagram</a>
+          <a href="https://tiktok.com/@suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#127925;</span>TikTok</a>
+          <a href="https://youtube.com/@DFNWorldwide" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#9654;</span>YouTube</a>
+          <a href="https://twitter.com/DFNWorldwide" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#10005;</span>Twitter/X</a>
+          <a href="https://facebook.com/DFNWorldwide" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#128100;</span>Facebook</a>
+          <a href="https://www.linkedin.com/in/suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#128188;</span>LinkedIn</a>
+          <a href="#" class="social-platform-btn" data-link="spotify" target="_blank" rel="noopener"><span class="social-platform-icon">&#9835;</span>Spotify</a>
+          <a href="https://audiomack.com/suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#127911;</span>Audiomack</a>
+          <a href="https://dfnworldwide.gumroad.com/l/bsawq" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#128218;</span>Gumroad</a>
+          <a href="https://www.bandlab.com/suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#127908;</span>BandLab</a>
+          <a href="https://www.beatstars.com/suavemelodies" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#11088;</span>BeatStars</a>
+          <a href="https://github.com/dfnworldwide" class="social-platform-btn" target="_blank" rel="noopener"><span class="social-platform-icon">&#128187;</span>GitHub</a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label" for="cf-name">Your Name *</label><input class="form-input" type="text" id="cf-name" name="name" placeholder="Full name" required></div>
+            <div class="form-group"><label class="form-label" for="cf-email">Email *</label><input class="form-input" type="email" id="cf-email" name="email" placeholder="your@email.com" required></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cf-type">Enquiry Type *</label>
+            <select class="form-input" id="cf-type" name="type" required>
+              <option value="" disabled selected>Select enquiry type</option>
+              <option value="press">Press / Media</option>
+              <option value="playlist">Playlist / Sync Licensing</option>
+              <option value="sponsor">Sponsorship / Partnership</option>
+              <option value="book">Book / Publishing</option>
+              <option value="collab">Collaboration</option>
+              <option value="general">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label" for="cf-subject">Subject *</label><input class="form-input" type="text" id="cf-subject" name="subject" placeholder="What is this about?" required></div>
+          <div class="form-group"><label class="form-label" for="cf-message">Message *</label><textarea class="form-textarea" id="cf-message" name="message" placeholder="Tell us more..." required></textarea></div>
+          <button type="submit" class="btn btn-gold btn-full" id="contact-submit">Send Message</button>
+          <p class="form-note">We respond to every message within 24&ndash;48 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join" class="section-pad-lg t-center" style="background:var(--dark);border-top:1px solid rgba(201,168,76,0.18);" aria-labelledby="join-heading">
+  <div class="container">
+    <div class="join-inner">
+      <p class="t-eyebrow reveal">Enter the Movement</p>
+      <div class="gold-rule gold-rule--center reveal"></div>
+      <h2 id="join-heading" class="join-title t-display reveal">This Is Only<br>The Beginning</h2>
+      <p class="t-dim reveal mb-lg">Join the DFN Worldwide movement. First access to new music, book releases, and drops. You get the free Reset System book the moment you join.</p>
+      <div class="email-form reveal" id="join-form" style="max-width:100%">
+        <input type="email" id="join-email" placeholder="Your email address" aria-label="Email address" autocomplete="email">
+        <button type="button" id="join-submit">Join Now &mdash; Free</button>
+      </div>
+      <p class="form-note reveal">Free. No spam. Unsubscribe anytime.</p>
+      <div class="benefits-row reveal">
+        <span class="benefit">&#10003; Free Reset System Book</span>
+        <span class="benefit">&#10003; Early drop access</span>
+        <span class="benefit">&#10003; DFN movement updates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name t-display">DFN Worldwide</div>
+        <div class="footer-brand-tag">From Nothing, Build Everything</div>
+        <div class="footer-brand-reg">DFN Worldwide PTY Ltd<br>Reg. No. 2026/408693/07<br>Tembisa, Gauteng, South Africa<br>dfnworldwide@gmail.com<br>+27 83 682 1802<br>&#8471; &amp; &copy; 2026 DFN Worldwide PTY Ltd<br>All Rights Reserved</div>
+        <div class="social-row mt-md">
+          <a href="https://instagram.com/suavemelodies" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://tiktok.com/@suavemelodies" class="social-btn" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+          <a href="https://youtube.com/@DFNWorldwide" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+          <a href="https://twitter.com/DFNWorldwide" class="social-btn" target="_blank" rel="noopener" aria-label="Twitter/X">X</a>
+          <a href="https://facebook.com/DFNWorldwide" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="https://www.linkedin.com/in/suavemelodies" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+          <a href="mailto:dfnworldwide@gmail.com" class="social-btn" aria-label="Email">&#9993;</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col">Navigate</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About DFN</a></li>
+          <li><a href="#experiences">Release Calendar</a></li>
+          <li><a href="#divisions">Divisions</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#founder">Suave Melodies</a></li>
+          <li><a href="#press">Press &amp; Media</a></li>
+          <li><a href="#sponsors">Partnerships</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col">Products</h3>
+        <ul class="footer-links">
+          <li><a href="pages/records.html">DFNCHALLENGE EP &mdash; Live</a></li>
+          <li><a href="pages/records.html">DFNSTORY EP &mdash; Sep 23</a></li>
+          <li><a href="pages/records.html">DFNLEGACY EP &mdash; Nov 23</a></li>
+          <li><a href="https://dfnworldwide.gumroad.com/l/bsawq" target="_blank" rel="noopener">Free Reset System Book</a></li>
+          <li><a href="pages/publishing.html">Full System &mdash; Sep 23</a></li>
+          <li><a href="pages/publishing.html">Artist Bible &mdash; Nov 23</a></li>
+          <li><a href="pages/designs.html">DFN Hoodie &mdash; Sep 23</a></li>
+          <li><a href="pages/devs.html">Discipline Tracker &mdash; Free</a></li>
+          <li><a href="pages/devs.html">DFN Artist System &mdash; Nov 23</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 DFN Worldwide PTY Ltd &middot; Reg. 2026/408693/07 &middot; SAMRO &middot; CAPASSO &middot; SAMPRA &middot; SoundExchange &middot; All Rights Reserved</span>
+      <span class="t-gold" style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.22em;">FROM NOTHING, BUILD EVERYTHING</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="modal-box" id="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-cover"><img id="modal-img" src="" alt="" loading="lazy"></div>
+    <div class="modal-body">
+      <span id="modal-badge"></span>
+      <h3 class="modal-title t-display" id="modal-title"></h3>
+      <p class="modal-meta" id="modal-meta"></p>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div id="modal-tracklist"></div>
+      <div id="modal-actions" class="btn-group mt-md"></div>
+    </div>
+  </div>
+</div>
+
+<!-- DFN AI CHAT -->
+<div class="dfn-ai-widget" id="dfn-ai-widget" aria-label="DFN AI Assistant">
+  <div class="dfn-ai-panel" id="dfn-ai-panel" role="complementary">
+    <div class="dfn-ai-header">
+      <div class="dfn-ai-avatar">DFN</div>
+      <div>
+        <div class="dfn-ai-name">DFN AI</div>
+        <div class="dfn-ai-status">Online &mdash; Powered by Discipline</div>
+      </div>
+      <button class="dfn-ai-close" id="dfn-ai-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="dfn-ai-messages" id="dfn-ai-messages" aria-live="polite">
+      <div class="chat-msg bot"><div class="chat-bubble">What&apos;s up. I&apos;m the DFN AI &mdash; ask me about the music, the books, the drops, or anything about DFN Worldwide.</div></div>
+    </div>
+    <div class="dfn-ai-quick" id="dfn-ai-quick">
+      <button class="quick-btn" data-q="What is DFN Worldwide?">What is DFN?</button>
+      <button class="quick-btn" data-q="Tell me about the three drops">2026 Drops</button>
+      <button class="quick-btn" data-q="How do I get the free book?">Free Book</button>
+      <button class="quick-btn" data-q="Where do I stream the music?">Stream Music</button>
+    </div>
+    <div class="dfn-ai-input-row">
+      <input type="text" class="dfn-ai-input" id="dfn-ai-input" placeholder="Ask anything..." aria-label="Chat message">
+      <button class="dfn-ai-send" id="dfn-ai-send" aria-label="Send">&#9658;</button>
+    </div>
+  </div>
+  <button class="dfn-ai-trigger" id="dfn-ai-trigger" aria-label="Open DFN AI chat">
+    <span style="font-family:var(--font-ui);font-weight:900;font-size:0.8rem;color:var(--black)">DFN</span>
+    <span class="dfn-ai-badge"></span>
+  </button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="cursor-dot"  id="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
