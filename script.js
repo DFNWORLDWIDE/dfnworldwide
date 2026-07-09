@@ -18,7 +18,7 @@ const DFN = {
   youtube:       'https://youtube.com/@DFNWorldwide',
   twitter:       'https://twitter.com/DFNWorldwide',
   facebook:      'https://facebook.com/DFNWorldwide',
-  linkedin:      'https://www.linkedin.com/in/suave-melodies-00b02739b',
+  linkedin:      'https://www.linkedin.com/in/suave-melodies-00b02739b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   github:        'https://github.com/dfnworldwide',
 
   // ── MUSIC ── ⚠️ PLACEHOLDER — you're getting the real artist link (not a /user/ profile link)
@@ -41,7 +41,7 @@ const DFN = {
   whatsapp:      'https://wa.me/27836821802',
 
   // ── DROP DATES ──
-  nextDrop:      new Date('2026-09-23T00:00:00+02:00'), // Rise Experience
+  nextDrop:      new Date('2026-07-23T00:00:00+02:00'), // Rise Experience
 };
 
 /* ── MODAL DATA ─────────────────────────────────────────────── */
