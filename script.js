@@ -7,8 +7,9 @@
 const DFN = {
   // ── LIVE ENDPOINTS ──
   formspree:     'https://formspree.io/f/maqgbydo',
-  // Set this after creating your n8n webhook node:
-  // Workflow URL: https://dfnworldwide.app.n8n.cloud/home/workflows
+  // ⚠️ PLACEHOLDER — must be the PRODUCTION webhook URL (path starts with /webhook/, NOT /webhook-test/).
+  // Test URLs only fire once, manually, from inside the n8n editor — they silently drop real traffic.
+  // Get the real one from your workflow → toggle Active → click the Webhook node → copy the Production URL.
   n8nWebhook:    'https://dfnworldwide.app.n8n.cloud/webhook/dfn-subscriber',
 
   // ── SOCIAL ──
@@ -17,10 +18,10 @@ const DFN = {
   youtube:       'https://youtube.com/@DFNWorldwide',
   twitter:       'https://twitter.com/DFNWorldwide',
   facebook:      'https://facebook.com/DFNWorldwide',
-  linkedin:      'https://www.linkedin.com/in/suavemelodies',
+  linkedin:      'https://www.linkedin.com/in/suave-melodies-00b02739b',
   github:        'https://github.com/dfnworldwide',
 
-  // ── MUSIC ──  (update when live on platforms)
+  // ── MUSIC ── ⚠️ PLACEHOLDER — you're getting the real artist link (not a /user/ profile link)
   spotify:       '#',
   appleMusic:    '#',
   amazonMusic:   '#',
@@ -29,9 +30,10 @@ const DFN = {
   beatstars:     'https://www.beatstars.com/suavemelodies',
 
   // ── PRODUCTS ──
-  gumroad:       'https://suavemelodies.gumroad.com',
-  kdpBook:       '#',   // update when KDP live
-  etsy:          '#',   // update when Etsy store live
+  gumroad:            'https://dfnworldwide.gumroad.com/l/bsawq',  // The Reset System — live
+  gumroadFullSystem:  '#',  // The System That Forces You to Win — swap in once that Gumroad link exists (Sep 23)
+  kdpBook:            '#',  // update when KDP live
+  etsy:               '#',  // ⚠️ PLACEHOLDER — you're getting the real /shop/ storefront link (not a /people/ profile link)
 
   // ── CONTACT ──
   email:         'mailto:dfnworldwide@gmail.com',
@@ -58,7 +60,7 @@ const MODALS = {
     ],
     actions: [
       {label:'Stream DFNCHALLENGE',href:'pages/records.html',style:'btn-gold'},
-      {label:'Download Free Book',href:'https://suavemelodies.gumroad.com',style:'btn-outline',external:true},
+      {label:'Download Free Book',href:'https://dfnworldwide.gumroad.com/l/bsawq',style:'btn-outline',external:true},
     ],
   },
   rise: {
@@ -183,7 +185,7 @@ const AI_KB = [
   { keys:['three drops','2026 drops','experiences','release calendar'],
     ans: '3 drops in 2026:\n\n🔥 July 23 — The Reset Experience\nDFNCHALLENGE EP + Free Reset System Book\n\n⬆️ Sep 23 — The Rise Experience\nDFNSTORY EP (6 tracks) + Full System Book + DFN Hoodie\n\n🏆 Nov 23 — The Legacy Experience\nDFNLEGACY EP (8 tracks) + Artist Bible + DFN Artist System App' },
   { keys:['free book','reset system','download','gumroad'],
-    ans: 'The Reset System is 100% free. Download it now:\nsuavemelodies.gumroad.com\n\n8 chapters. The 15-Minute Reset. The 30-Day Protocol. Full worksheets. No credit card. No sign-up required.' },
+    ans: 'The Reset System is 100% free. Download it now:\ndfnworldwide.gumroad.com/l/bsawq\n\n8 chapters. The 15-Minute Reset. The 30-Day Protocol. Full worksheets. No credit card. No sign-up required.' },
   { keys:['stream','spotify','music','listen','apple','audiomack'],
     ans: 'DFNCHALLENGE EP is live on 40+ streaming platforms via RouteNote.\n\nSearch "DFNCHALLENGE" or "Suave Melodies" on Spotify, Apple Music, YouTube Music, Amazon Music, and Audiomack. Or visit dfnworldwide.com/pages/records.html for all links.' },
   { keys:['dfnstory','story ep','6 tracks','september','rise'],
