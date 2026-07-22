@@ -29,7 +29,7 @@ const DFN = {
   github:        'https://github.com/dfnworldwide',
 
   // ── MUSIC ──  (update when live on platforms)
-  spotify:       '#',
+  spotify:       'https://open.spotify.com/album/14tUxXqebZGz7SgULhOA4j?si=RsWo8CPlSNqF20DBoX8Ofw&utm_source=copy-link',
   appleMusic:    '#',
   amazonMusic:   '#',
   audiomack:     'https://audiomack.com/suavemelodies',
