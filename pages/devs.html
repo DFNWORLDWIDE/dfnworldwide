@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFN Worldwide Devs | Discipline Tracker & Artist System</title>
+<meta name="description" content="DFN Worldwide Devs — the free Discipline Tracker app and the DFN Artist System launching November 23, 2026.">
+  <link rel="canonical" href="https://dfnworldwide.com/pages/devs.html">
+  <meta property="og:title" content="DFN Worldwide Devs | Discipline Tracker & Artist System">
+  <meta property="og:description" content="DFN Worldwide Devs — the free Discipline Tracker app and the DFN Artist System launching November 23, 2026.">
+  <meta property="og:image" content="https://dfnworldwide.com/assets/images/logo1.webp">
+  <meta property="og:url" content="https://dfnworldwide.com/pages/devs.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@DFNWorldwide">
+<link rel="icon" type="image/webp" href="../assets/images/logo1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,400&family=Barlow+Condensed:wght@200;300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.apps-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gold-border)}
+.app-card{background:var(--card);padding:2.3rem 2rem;border-top:3px solid rgba(255,255,255,0.06)}
+.app-card.live{border-top-color:#4CAF50}
+.app-card.soon{border-top-color:var(--gold)}
+.app-icon{font-size:2.2rem;margin-bottom:1rem}
+.app-title{font-family:var(--font-display);font-weight:700;font-size:1.55rem;color:var(--white);margin-bottom:0.4rem}
+.app-meta{font-family:var(--font-ui);font-size:0.64rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.app-desc{font-size:0.88rem;color:var(--dim);line-height:1.75;margin-bottom:1.2rem}
+.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gold-border)}
+.stack-item{background:var(--card);padding:1.6rem 1.2rem;text-align:center}
+.stack-icon{font-size:1.6rem;margin-bottom:0.6rem}
+.stack-name{font-family:var(--font-ui);font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--white)}
+.stack-sub{font-size:0.68rem;color:var(--muted);margin-top:0.2rem}
+/* ── TRACKER WIDGET ── */
+.tracker-shell{background:var(--dark);border:1px solid var(--gold-border);border-top:3px solid var(--gold);padding:0;max-width:640px;margin:0 auto;overflow:hidden}
+.tracker-head{padding:1.4rem 1.6rem;background:var(--dark-alt);border-bottom:1px solid var(--gold-border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.8rem}
+.tracker-head-title{font-family:var(--font-ui);font-weight:900;font-size:0.85rem;letter-spacing:0.1em;color:var(--gold)}
+.tracker-head-day{font-family:var(--font-ui);font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;background:var(--gold);color:var(--black);padding:0.3rem 0.8rem}
+.t-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.06)}
+.t-stat{background:var(--card);padding:1.1rem 0.5rem;text-align:center}
+.t-stat-num{font-family:var(--font-display);font-weight:700;font-size:1.7rem;color:var(--gold);line-height:1}
+.t-stat-lbl{font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem}
+.t-tabs{display:flex;border-bottom:1px solid var(--gold-border)}
+.t-tab{flex:1;font-family:var(--font-ui);font-weight:700;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.9rem 0.5rem;background:none;border:none;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all 0.2s}
+.t-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.t-panel{padding:1.6rem;display:none}
+.t-panel.active{display:block}
+.t-identity{background:var(--card);border-left:3px solid var(--gold);padding:1rem 1.2rem;margin-bottom:1.2rem}
+.t-identity-label{font-family:var(--font-ui);font-size:0.58rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:flex;justify-content:space-between}
+.t-identity-edit{background:none;border:none;color:var(--gold-dim);font-family:var(--font-ui);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer}
+.t-identity-text{font-family:var(--font-display);font-style:italic;font-size:1.02rem;color:var(--white);line-height:1.6;min-height:1.4em}
+.t-identity-input{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--gold);color:var(--white);font-family:var(--font-display);font-style:italic;font-size:1rem;padding:0.6rem 0.8rem;resize:vertical;min-height:60px}
+.nn-list{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.3rem}
+.nn-row{display:flex;align-items:center;gap:0.9rem;padding:0.85rem 1rem;background:var(--card);border-left:3px solid rgba(255,255,255,0.1);cursor:pointer;transition:all 0.2s;user-select:none}
+.nn-row.done{background:rgba(76,175,80,0.08);border-left-color:#4CAF50}
+.nn-box{width:22px;height:22px;flex-shrink:0;border:1.5px solid var(--muted);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#4CAF50;transition:all 0.2s}
+.nn-row.done .nn-box{background:rgba(76,175,80,0.2);border-color:#4CAF50}
+.nn-label{font-family:var(--font-ui);font-weight:600;font-size:0.8rem;letter-spacing:0.03em;text-transform:uppercase;color:var(--white);flex:1}
+.nn-row.done .nn-label{color:var(--muted);text-decoration:line-through}
+.timer-box{background:linear-gradient(135deg,rgba(201,168,76,0.07),transparent);border:1px solid var(--gold-border);padding:1.4rem;margin-bottom:1.3rem;text-align:center}
+.timer-label{font-family:var(--font-ui);font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.6rem}
+.timer-num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,8vw,3.6rem);color:var(--gold);line-height:1;letter-spacing:-0.02em;transition:color 0.3s}
+.timer-num.running{color:var(--gold-bright)}
+.timer-num.done{color:#4CAF50}
+.timer-btns{display:flex;gap:0.5rem;margin-top:1rem}
+.timer-btn{flex:1;padding:0.7rem;font-family:var(--font-ui);font-weight:700;font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;border:1px solid var(--gold-border);background:none;color:var(--dim);cursor:pointer;transition:all 0.2s}
+.timer-btn.primary{background:var(--gold);color:var(--black);border-color:var(--gold)}
+.score-row{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.score-input{width:70px;background:rgba(255,255,255,0.04);border:1px solid var(--gold-border);color:var(--gold);font-family:var(--font-display);font-weight:700;font-size:1.5rem;padding:0.5rem;text-align:center}
+.notes-area{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(201,168,76,0.15);color:var(--white);font-family:var(--font-body);font-size:0.85rem;padding:0.8rem;min-height:80px;resize:vertical;margin-bottom:1rem}
+.save-btn{width:100%;padding:0.9rem;font-family:var(--font-ui);font-weight:700;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;cursor:pointer;transition:all 0.3s}
+.save-btn.saved{background:rgba(76,175,80,0.15);color:#4CAF50;border:1px solid #4CAF50}
+.cal-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-bottom:1rem}
+.cal-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:var(--font-ui);font-weight:700;font-size:0.62rem;border:1px solid rgba(255,255,255,0.05)}
+.cal-cell.done{background:rgba(76,175,80,0.22);border-color:rgba(76,175,80,0.4);color:#4CAF50}
+.cal-cell.today{background:rgba(201,168,76,0.16);border-color:var(--gold);color:var(--gold)}
+.cal-cell.missed{background:rgba(200,50,50,0.1);border-color:rgba(200,50,50,0.22);color:#e06060}
+.cal-cell.future{color:rgba(255,255,255,0.14)}
+.cal-legend{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.leg-item{display:flex;align-items:center;gap:5px;font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+.leg-dot{width:11px;height:11px}
+.rule-card{background:var(--card);border:1px solid var(--gold-border);border-left:3px solid var(--gold);padding:1rem 1.2rem;margin-bottom:0.6rem}
+.rule-num{font-family:var(--font-ui);font-weight:700;font-size:0.55rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.5rem}
+.rule-text{font-family:var(--font-display);font-style:italic;font-size:0.92rem;color:var(--white);line-height:1.65}
+.reset-link{text-align:center;margin-top:1rem}
+.reset-link button{background:none;border:1px solid rgba(255,255,255,0.08);color:var(--muted);font-family:var(--font-ui);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;cursor:pointer}
+@media(max-width:768px){.apps-grid,.stack-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.apps-grid,.stack-grid{grid-template-columns:1fr}.cal-grid{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="page-overlay" id="page-overlay"></div>
+<svg style="display:none" aria-hidden="true">
+<defs>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,7 12,13 21,7"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1.5 1.5 0 0 1 1.5-.4 11 11 0 0 0 3.5.6 1.5 1.5 0 0 1 1.5 1.5v3.4A1.5 1.5 0 0 1 20.4 22 17.9 17.9 0 0 1 2 3.6 1.5 1.5 0 0 1 3.5 2h3.4A1.5 1.5 0 0 1 8.4 3.5a11 11 0 0 0 .6 3.5 1.5 1.5 0 0 1-.4 1.5z"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="2" y1="13" x2="22" y2="13"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><line x1="2.5" y1="12" x2="21.5" y2="12"/><path d="M12 2.5c3 3 3 16 0 19"/><path d="M12 2.5c-3 3-3 16 0 19"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9.5" r="2.4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><polyline points="14,2 14,7 19,7"/><line x1="7.5" y1="13" x2="16.5" y2="13"/><line x1="7.5" y1="17" x2="14" y2="17"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="14" rx="3"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.6-2.4h4.8L16 6"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><polygon points="10,8 16.5,12 10,16"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><line x1="4" y1="10" x2="4" y2="14"/><line x1="9" y1="5" x2="9" y2="19"/><line x1="14" y1="8" x2="14" y2="16"/><line x1="19" y1="3" x2="19" y2="21"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M15.3 12.2A5 5 0 0 1 21.5 17"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><polyline points="8,6 2,12 8,18"/><polyline points="16,6 22,12 16,18"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,2.5 15,9 22,10 17,15 18.2,21.5 12,18.3 5.8,21.5 7,15 2,10 9,9"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"/><polyline points="7,10 12,15 17,10"/><line x1="3.5" y1="21" x2="20.5" y2="21"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3 3 6.5 5.5 10 8 8.5V21h8V8.5l2.5 1.5L21 6.5 16 3l-2 2h-4z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M2.5 4.5c3-1.3 6-1.3 9 0v15c-3-1.3-6-1.3-9 0z"/><path d="M21.5 4.5c-3-1.3-6-1.3-9 0v15c3-1.3 6-1.3 9 0z"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 10,22 20,10 13,10"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><line x1="21" y1="21" x2="16.2" y2="16.2"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><line x1="8.3" y1="10.7" x2="15.7" y2="6.3"/><line x1="8.3" y1="13.3" x2="15.7" y2="17.7"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0"/><line x1="12" y1="17.5" x2="12" y2="22"/><line x1="8.5" y1="22" x2="15.5" y2="22"/></symbol>
+<symbol id="i-speaker" viewBox="0 0 24 24"><polygon points="4,9 8,9 12.5,5 12.5,19 8,15 4,15"/><path d="M16 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a8.5 8.5 0 0 1 0 12"/></symbol>
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M3 13a9 9 0 0 1 18 0"/><path d="M3 13h18v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="12" y1="4" x2="12" y2="1.5"/></symbol>
+<symbol id="i-notebook" viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="1.5"/><line x1="2.5" y1="6" x2="5" y2="6"/><line x1="2.5" y1="10" x2="5" y2="10"/><line x1="2.5" y1="14" x2="5" y2="14"/><line x1="2.5" y1="18" x2="5" y2="18"/><line x1="8" y1="7.5" x2="16" y2="7.5"/><line x1="8" y1="11" x2="16" y2="11"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"/><circle cx="8.5" cy="10" r="1.8"/><path d="M4 17l5.5-5.5 3.5 3.5 3-3 4.5 4.5"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 13H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+</defs>
+</svg>
+<header id="site-header" role="banner">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">
+      <img src="../assets/images/logo1.webp" alt="DFN" width="36" height="36" onerror="this.style.display='none'">
+      <span>DFN WORLDWIDE</span>
+    </a>
+    <nav class="main-nav"><ul>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="records.html">Records</a></li>
+      <li><a href="publishing.html">Publishing</a></li>
+      <li><a href="designs.html">Designs</a></li>
+      <li><a href="devs.html" style="color:var(--gold)">Devs</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="ai.html">AI</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul></nav>
+    <div style="display:flex;align-items:center;gap:0.75rem">
+      <button class="nav-search-btn" id="nav-search-btn" aria-label="Search the site"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+      <a href="../index.html#join" class="btn btn-gold">Enter the Movement</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="../index.html#about">About</a>
+    <a href="records.html">Records</a>
+    <a href="publishing.html">Publishing</a>
+    <a href="designs.html">Designs</a>
+    <a href="devs.html">Devs</a>
+    <a href="services.html">Services</a>
+    <a href="store.html">Store</a>
+    <a href="ai.html">AI</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../index.html#join" class="t-gold">Enter the Movement &rarr;</a>
+  </nav>
+</header>
+
+<div class="breadcrumb container">
+  <a href="../index.html">Home</a><span class="bc-sep">/</span><span aria-current="page">Devs</span>
+</div>
+<section class="div-hero hero-devs" id="main" tabindex="-1">
+  <div class="div-hero-glow"></div>
+  <div class="div-hero-inner">
+    <div class="div-hero-tag">DFN-04 &middot; Software &amp; Tools</div>
+    <h1 class="div-hero-title t-display">DFN Worldwide<br><span class="t-gold">Devs</span></h1>
+    <p class="div-hero-sub">The Systems Behind The System</p>
+    <div class="btn-group mt-lg" style="justify-content:center">
+      <a href="#tracker" class="btn btn-gold">Open Discipline Tracker</a>
+      <a href="#stack" class="btn btn-outline">View Tech Stack</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>DISCIPLINE TRACKER — LIVE &amp; FREE</span><span class="marquee-dot">&#9670;</span>
+    <span>DFN ARTIST SYSTEM — NOVEMBER 23, 2026 — THE LEGACY EXPERIENCE</span><span class="marquee-dot">&#9670;</span>
+    <span>BUILT IN-HOUSE &middot; ZERO DEPENDENCY</span><span class="marquee-dot">&#9670;</span>
+    <span>DISCIPLINE TRACKER — LIVE &amp; FREE</span><span class="marquee-dot">&#9670;</span>
+    <span>DFN ARTIST SYSTEM — NOVEMBER 23, 2026 — THE LEGACY EXPERIENCE</span><span class="marquee-dot">&#9670;</span>
+    <span>BUILT IN-HOUSE &middot; ZERO DEPENDENCY</span><span class="marquee-dot">&#9670;</span>
+  </div>
+</div>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="reveal mb-lg">
+      <p class="t-eyebrow">The Tools</p>
+      <div class="gold-rule"></div>
+      <h2 class="section-title t-display">Software That<br>Runs the Discipline.</h2>
+    </div>
+    <div class="apps-grid reveal">
+      <div class="app-card live">
+        <div class="app-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div>
+        <div class="app-title t-display">Discipline Tracker</div>
+        <div class="app-meta" style="color:#4CAF50">Live &amp; Free &middot; No Account Needed</div>
+        <p class="app-desc">Daily non-negotiables, the 15-Minute Reset timer, Zero Score tracking, and a 30-day protocol calendar. Runs entirely in your browser &mdash; your data stays on your device.</p>
+        <a href="#tracker" class="btn btn-gold btn-full">Open Tracker Below &darr;</a>
+      </div>
+      <div class="app-card soon">
+        <div class="app-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></div>
+        <div class="app-title t-display">DFN Artist System</div>
+        <div class="app-meta" style="color:var(--gold)">November 23, 2026 &middot; The Legacy Experience</div>
+        <p class="app-desc">The companion app to the Artist Bible. Rights registration tracking, release planning, and revenue pillar management built for independent artists.</p>
+        <a href="../index.html#join" class="btn btn-outline btn-full">Get Notified</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKER WIDGET -->
+<section id="tracker" class="section-pad" style="background:var(--dark-alt);border-top:1px solid rgba(201,168,76,0.1);">
+  <div class="container">
+    <div class="reveal mb-lg t-center">
+      <p class="t-eyebrow">Free &middot; No Sign-Up &middot; Runs in Your Browser</p>
+      <div class="gold-rule gold-rule--center"></div>
+      <h2 class="section-title t-display">The Discipline Tracker</h2>
+      <p class="t-dim mt-sm">Your progress saves automatically on this device. Come back daily.</p>
+    </div>
+
+    <div class="tracker-shell reveal">
+      <div class="tracker-head">
+        <span class="tracker-head-title">DFN DISCIPLINE TRACKER</span>
+        <span class="tracker-head-day" id="tr-day-badge">Day 1/30</span>
+      </div>
+
+      <div class="t-stats">
+        <div class="t-stat"><div class="t-stat-num" id="tr-streak">0</div><div class="t-stat-lbl">Streak</div></div>
+        <div class="t-stat"><div class="t-stat-num" id="tr-completed">0</div><div class="t-stat-lbl">Completed</div></div>
+        <div class="t-stat"><div class="t-stat-num" id="tr-today-count">0/4</div><div class="t-stat-lbl">Today</div></div>
+        <div class="t-stat"><div class="t-stat-num" id="tr-protocol-day">1</div><div class="t-stat-lbl">Protocol Day</div></div>
+      </div>
+
+      <div class="t-identity">
+        <div class="t-identity-label">
+          <span>My Identity Statement</span>
+          <button class="t-identity-edit" id="tr-id-edit">Edit</button>
+        </div>
+        <div class="t-identity-text" id="tr-id-text">Tap Edit to write who you are choosing to become.</div>
+        <textarea class="t-identity-input" id="tr-id-input" style="display:none" placeholder="I am a disciplined man. I execute under pressure."></textarea>
+      </div>
+
+      <div class="t-tabs">
+        <button class="t-tab active" data-tab="today">Today</button>
+        <button class="t-tab" data-tab="calendar">30 Days</button>
+        <button class="t-tab" data-tab="rules">DFN Rules</button>
+      </div>
+
+      <!-- TODAY -->
+      <div class="t-panel active" id="panel-today">
+        <div class="nn-list" id="tr-nn-list"></div>
+
+        <div class="timer-box">
+          <div class="timer-label">15-Minute Reset Protocol</div>
+          <div class="timer-num" id="tr-timer">15:00</div>
+          <div class="timer-btns">
+            <button class="timer-btn primary" id="tr-timer-start">Start</button>
+            <button class="timer-btn" id="tr-timer-reset">Reset</button>
+          </div>
+        </div>
+
+        <div class="score-row">
+          <input type="number" class="score-input" id="tr-score" min="0" max="24" placeholder="0">
+          <span style="font-family:var(--font-ui);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim)">hours of real execution today</span>
+        </div>
+
+        <textarea class="notes-area" id="tr-notes" placeholder="Biggest win today. Biggest failure. One improvement for tomorrow."></textarea>
+
+        <button class="save-btn" id="tr-save">Save Today&apos;s Entry</button>
+        <div class="reset-link"><button id="tr-reset-all">Reset All Progress</button></div>
+      </div>
+
+      <!-- CALENDAR -->
+      <div class="t-panel" id="panel-calendar">
+        <div class="cal-grid" id="tr-cal-grid"></div>
+        <div class="cal-legend">
+          <div class="leg-item"><div class="leg-dot" style="background:rgba(76,175,80,0.3);border:1px solid #4CAF50"></div>Done</div>
+          <div class="leg-item"><div class="leg-dot" style="background:rgba(201,168,76,0.2);border:1px solid var(--gold)"></div>Today</div>
+          <div class="leg-item"><div class="leg-dot" style="background:rgba(200,50,50,0.14);border:1px solid #e06060"></div>Missed</div>
+          <div class="leg-item"><div class="leg-dot" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1)"></div>Future</div>
+        </div>
+        <p class="t-dim" style="font-size:0.82rem;text-align:center" id="tr-cal-summary"></p>
+      </div>
+
+      <!-- RULES -->
+      <div class="t-panel" id="panel-rules"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="stack" class="section-pad" style="background:var(--black);border-top:1px solid rgba(201,168,76,0.06);">
+  <div class="container">
+    <div class="reveal mb-lg">
+      <p class="t-eyebrow">Built In-House</p>
+      <div class="gold-rule"></div>
+      <h2 class="section-title t-display">The Stack Behind<br>DFN Worldwide.</h2>
+      <p class="t-dim mt-sm" style="max-width:520px">No page builders. No subscriptions we don&apos;t control. Every layer owned or self-hosted.</p>
+    </div>
+    <div class="stack-grid reveal">
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></div><div class="stack-name">HTML/CSS/JS</div><div class="stack-sub">Hand-built, no framework</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div><div class="stack-name">GitHub Pages</div><div class="stack-sub">Hosting</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></div><div class="stack-name">Formspree</div><div class="stack-sub">Form handling</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div><div class="stack-name">n8n</div><div class="stack-sub">Automation</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg></div><div class="stack-name">Google Sheets</div><div class="stack-sub">CRM</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></div><div class="stack-name">Brevo</div><div class="stack-sub">Email sequences</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-wave"/></svg></div><div class="stack-name">RouteNote</div><div class="stack-sub">Music distribution</div></div>
+      <div class="stack-item"><div class="stack-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></div><div class="stack-name">Amazon KDP</div><div class="stack-sub">Publishing</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--dark-alt);border-top:1px solid var(--gold-border)">
+  <div class="container t-center reveal">
+    <p class="t-eyebrow">Building Something Technical?</p>
+    <div class="gold-rule gold-rule--center"></div>
+    <h2 class="section-title t-display" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Let&apos;s talk development.</h2>
+    <p class="t-dim mt-sm mb-lg">Freelance web development enquiries welcome.</p>
+    <a href="mailto:dfnworldwide@gmail.com?subject=DFN%20Worldwide%20Devs%20Enquiry" class="btn btn-gold">dfnworldwide@gmail.com</a>
+  </div>
+</section>
+
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name t-display">DFN Worldwide</div>
+        <div class="footer-brand-tag">From Nothing, Build Everything</div>
+        <div class="footer-brand-reg">DFN Worldwide PTY Ltd · Reg. 2026/408693/07<br>Tembisa, Gauteng, South Africa<br>dfnworldwide@gmail.com · +27 83 682 1802<br>© 2026 All Rights Reserved</div>
+        <div class="social-row mt-md">
+          <a href="https://instagram.com/suavemelodies" class="social-btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></a>
+          <a href="https://tiktok.com/@suavemelodies" class="social-btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></a>
+          <a href="https://youtube.com/@DFNWorldwide" class="social-btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></a>
+          <a href="https://twitter.com/DFNWorldwide" class="social-btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></a>
+          <a href="https://www.linkedin.com/in/suavemelodies" class="social-btn" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></a>
+          <a href="mailto:dfnworldwide@gmail.com" class="social-btn">✉</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col">Divisions</h3>
+        <ul class="footer-links">
+          <li><a href="records.html">DFN Records</a></li>
+          <li><a href="publishing.html">DFN Publishing</a></li>
+          <li><a href="designs.html">DFN Designs</a></li>
+          <li><a href="devs.html">DFN Devs</a></li>
+          <li><a href="../index.html">Headquarters</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col">Products</h3>
+        <ul class="footer-links">
+          <li><a href="records.html">DFNCHALLENGE EP — Live</a></li>
+          <li><a href="records.html">DFNSTORY EP — Sep 23</a></li>
+          <li><a href="records.html">DFNLEGACY EP — Nov 23</a></li>
+          <li><a href="https://suavemelodies.gumroad.com" target="_blank" rel="noopener">Free Book — Live</a></li>
+          <li><a href="publishing.html">Full System — Sep 23</a></li>
+          <li><a href="publishing.html">Artist Bible — Nov 23</a></li>
+          <li><a href="designs.html">DFN Hoodie — Sep 23</a></li>
+          <li><a href="devs.html">Discipline Tracker — Free</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col">Company</h3>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="ai.html">DFN AI</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="faq.html">FAQ &amp; Support</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 DFN Worldwide PTY Ltd · Reg. 2026/408693/07 · All Rights Reserved · <a href="privacy.html" style="color:inherit;text-decoration:underline">Privacy Policy</a> · <a href="terms.html" style="color:inherit;text-decoration:underline">Terms of Service</a></span>
+      <span class="t-gold" style="font-family:var(--font-ui);font-size:0.62rem;letter-spacing:0.22em;">FROM NOTHING, BUILD EVERYTHING</span>
+    </div>
+  </div>
+</footer>
+<div class="dfn-ai-widget" id="dfn-ai-widget" aria-label="DFN AI Assistant">
+  <div class="dfn-ai-panel" id="dfn-ai-panel" role="complementary">
+    <div class="dfn-ai-header">
+      <div class="dfn-ai-avatar">DFN</div>
+      <div>
+        <div class="dfn-ai-name">DFN AI</div>
+        <div class="dfn-ai-status">Online &mdash; Powered by Discipline</div>
+      </div>
+      <button class="dfn-ai-voice-toggle" id="dfn-ai-voice-toggle" aria-label="Read replies aloud" aria-pressed="false" hidden><svg class="icon" aria-hidden="true"><use href="#i-speaker"/></svg></button>
+      <button class="dfn-ai-close" id="dfn-ai-close" aria-label="Close chat">&times;</button>
+    </div>
+    <div class="dfn-ai-messages" id="dfn-ai-messages" aria-live="polite">
+      <div class="chat-msg bot"><div class="chat-bubble">What&apos;s up. I&apos;m the DFN AI &mdash; ask me about the music, the books, the drops, or anything about DFN Worldwide.</div></div>
+    </div>
+    <div class="dfn-ai-quick" id="dfn-ai-quick">
+      <button class="quick-btn" data-q="What is DFN Worldwide?">What is DFN?</button>
+      <button class="quick-btn" data-q="Tell me about the three drops">2026 Drops</button>
+      <button class="quick-btn" data-q="How do I get the free book?">Free Book</button>
+      <button class="quick-btn" data-q="Where do I stream the music?">Stream Music</button>
+    </div>
+    <div class="dfn-ai-input-row">
+      <input type="text" class="dfn-ai-input" id="dfn-ai-input" placeholder="Ask anything..." aria-label="Chat message">
+      <button class="dfn-ai-mic" id="dfn-ai-mic" aria-label="Ask by voice" hidden><svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg></button>
+      <button class="dfn-ai-send" id="dfn-ai-send" aria-label="Send">&#9658;</button>
+    </div>
+  </div>
+  <button class="dfn-ai-trigger" id="dfn-ai-trigger" aria-label="Open DFN AI chat">
+    <span style="font-family:var(--font-ui);font-weight:900;font-size:0.8rem;color:var(--black)">DFN</span>
+    <span class="dfn-ai-badge"></span>
+  </button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<script src="../script.js"></script>
+<script>
+(function(){
+  "use strict";
+  var KEY = "dfn_discipline_tracker_v2";
+  var NN_LABELS = [
+    "Morning Anchor — Reset + Main Task",
+    "Non-Negotiable Block — Deep Work",
+    "Deliberate Discomfort — Push Limits",
+    "Evening Review — Score & Reflect"
+  ];
+  var RULES = [
+    "Motivation is the reward for action, not the requirement for it. Build the structure that makes the feeling irrelevant.",
+    "Inconsistency is the silent killer of potential. It doesn't shout. It whispers until your dreams become memories.",
+    "Comfortable lies keep you weak. Painful truth sets you free. Face reality without flinching.",
+    "When you feel lost, do not wait for clarity. Create it through immediate, decisive action.",
+    "Structure defeats chaos. A mediocre plan executed daily beats a perfect plan executed occasionally.",
+    "Discipline is temporary. Identity is permanent. Build the identity of a man who no longer negotiates with himself.",
+    "Seven days of disciplined action beats seven months of sporadic motivation.",
+    "Thirty days of disciplined action will change how the world sees you. More importantly, it will change how you see yourself."
+  ];
+
+  function todayStr(){ return new Date().toISOString().split("T")[0]; }
+  function defaultDay(){ return { nn:[false,false,false,false], score:"", notes:"", saved:false }; }
+  function defaultState(){ return { startDate: todayStr(), identity:"", days:{} }; }
+
+  function loadState(){
+    try { var raw = localStorage.getItem(KEY); if (raw) return JSON.parse(raw); } catch(e){}
+    return defaultState();
+  }
+  function saveState(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+
+  var state = loadState();
+  var today = todayStr();
+  if (!state.days[today]) state.days[today] = defaultDay();
+
+  function daysBetween(a,b){ return Math.floor((new Date(b) - new Date(a)) / 86400000); }
+  function calcStreak(days){
+    var streak = 0, d = new Date();
+    for (var i=0;i<30;i++){
+      var s = new Date(d); s.setDate(s.getDate()-i);
+      var key = s.toISOString().split("T")[0];
+      var day = days[key];
+      if (day && day.saved && day.nn.every(Boolean)) streak++;
+      else if (i>0) break;
+    }
+    return streak;
+  }
+  function calcCompleted(days){
+    var c=0; for (var k in days){ if (days[k].saved && days[k].nn.every(Boolean)) c++; } return c;
+  }
+
+  function render(){
+    var d = state.days[today];
+    var streak = calcStreak(state.days);
+    var completed = calcCompleted(state.days);
+    var protocolDay = Math.min(Math.max(daysBetween(state.startDate, today)+1, 1), 30);
+    var nnDone = d.nn.filter(Boolean).length;
+
+    document.getElementById("tr-streak").textContent = streak;
+    document.getElementById("tr-completed").textContent = completed;
+    document.getElementById("tr-today-count").textContent = nnDone + "/4";
+    document.getElementById("tr-protocol-day").textContent = protocolDay;
+    document.getElementById("tr-day-badge").textContent = "Day " + protocolDay + "/30";
+
+    document.getElementById("tr-id-text").textContent = state.identity || "Tap Edit to write who you are choosing to become.";
+    document.getElementById("tr-score").value = d.score || "";
+    document.getElementById("tr-notes").value = d.notes || "";
+
+    var nnList = document.getElementById("tr-nn-list");
+    nnList.innerHTML = "";
+    NN_LABELS.forEach(function(label, i){
+      var row = document.createElement("div");
+      row.className = "nn-row" + (d.nn[i] ? " done" : "");
+      row.innerHTML = '<div class="nn-box">' + (d.nn[i] ? "&#10003;" : "") + '</div><div class="nn-label">' + label + '</div>';
+      row.addEventListener("click", function(){
+        d.nn[i] = !d.nn[i];
+        saveState(state);
+        render();
+      });
+      nnList.appendChild(row);
+    });
+
+    var saveBtn = document.getElementById("tr-save");
+    saveBtn.textContent = d.saved ? "✓ Day Logged — Execution Complete" : "Save Today's Entry";
+    saveBtn.className = "save-btn" + (d.saved ? " saved" : "");
+
+    // Calendar
+    var calGrid = document.getElementById("tr-cal-grid");
+    calGrid.innerHTML = "";
+    for (var i=0;i<30;i++){
+      var dt = new Date(state.startDate + "T12:00:00");
+      dt.setDate(dt.getDate()+i);
+      var ds = dt.toISOString().split("T")[0];
+      var isToday = ds === today, isPast = ds < today;
+      var dayData = state.days[ds];
+      var status = "future";
+      if (isToday) status = "today";
+      else if (dayData && dayData.saved && dayData.nn.every(Boolean)) status = "done";
+      else if (isPast) status = "missed";
+      var cell = document.createElement("div");
+      cell.className = "cal-cell " + status;
+      cell.textContent = i+1;
+      calGrid.appendChild(cell);
+    }
+    document.getElementById("tr-cal-summary").textContent = completed + " / 30 days complete · Started " + state.startDate;
+
+    // Rules
+    var rulesPanel = document.getElementById("panel-rules");
+    if (!rulesPanel.dataset.built) {
+      rulesPanel.innerHTML = RULES.map(function(r,i){
+        return '<div class="rule-card"><div class="rule-num">DFN Rule 0' + (i+1) + '</div><div class="rule-text">' + r + '</div></div>';
+      }).join("");
+      rulesPanel.dataset.built = "1";
+    }
+  }
+
+  // Identity edit
+  var idEdit = document.getElementById("tr-id-edit");
+  var idText = document.getElementById("tr-id-text");
+  var idInput = document.getElementById("tr-id-input");
+  idEdit.addEventListener("click", function(){
+    if (idInput.style.display === "none") {
+      idInput.value = state.identity;
+      idInput.style.display = "block";
+      idText.style.display = "none";
+      idEdit.textContent = "Save";
+      idInput.focus();
+    } else {
+      state.identity = idInput.value.trim();
+      saveState(state);
+      idInput.style.display = "none";
+      idText.style.display = "block";
+      idEdit.textContent = "Edit";
+      render();
+    }
+  });
+
+  // Tabs
+  document.querySelectorAll(".t-tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".t-tab").forEach(function(t){ t.classList.remove("active"); });
+      document.querySelectorAll(".t-panel").forEach(function(p){ p.classList.remove("active"); });
+      tab.classList.add("active");
+      document.getElementById("panel-" + tab.dataset.tab).classList.add("active");
+    });
+  });
+
+  // Score & notes
+  document.getElementById("tr-score").addEventListener("input", function(e){
+    state.days[today].score = e.target.value; saveState(state);
+  });
+  document.getElementById("tr-notes").addEventListener("input", function(e){
+    state.days[today].notes = e.target.value; saveState(state);
+  });
+
+  // Save day
+  document.getElementById("tr-save").addEventListener("click", function(){
+    state.days[today].saved = true;
+    saveState(state);
+    render();
+  });
+
+  // Reset all
+  document.getElementById("tr-reset-all").addEventListener("click", function(){
+    if (window.confirm("Reset ALL progress? This cannot be undone.")) {
+      state = defaultState();
+      state.days[today] = defaultDay();
+      saveState(state);
+      render();
+    }
+  });
+
+  // 15-min timer
+  var seconds = 900, running = false, finished = false, interval = null;
+  var timerEl = document.getElementById("tr-timer");
+  var startBtn = document.getElementById("tr-timer-start");
+  var resetBtn = document.getElementById("tr-timer-reset");
+
+  function updateTimerDisplay(){
+    var m = String(Math.floor(seconds/60)).padStart(2,"0");
+    var s = String(seconds%60).padStart(2,"0");
+    timerEl.textContent = finished ? "EXECUTE" : (m + ":" + s);
+    timerEl.className = "timer-num" + (running ? " running" : "") + (finished ? " done" : "");
+  }
+  startBtn.addEventListener("click", function(){
+    if (running) {
+      clearInterval(interval); running = false; startBtn.textContent = "Start";
+    } else {
+      if (finished) { seconds = 900; finished = false; }
+      running = true; startBtn.textContent = "Pause";
+      interval = setInterval(function(){
+        seconds--;
+        if (seconds <= 0) {
+          clearInterval(interval); running = false; finished = true; seconds = 0;
+          startBtn.textContent = "Run Again";
+        }
+        updateTimerDisplay();
+      }, 1000);
+    }
+    updateTimerDisplay();
+  });
+  resetBtn.addEventListener("click", function(){
+    clearInterval(interval); running = false; finished = false; seconds = 900;
+    startBtn.textContent = "Start";
+    updateTimerDisplay();
+  });
+  updateTimerDisplay();
+
+  render();
+})();
+</script>
+</body>
+</html>
