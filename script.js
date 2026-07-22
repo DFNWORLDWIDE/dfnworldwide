@@ -25,7 +25,7 @@ const DFN = {
   youtube:       'https://youtube.com/@DFNWorldwide',
   twitter:       'https://twitter.com/DFNWorldwide',
   facebook:      'https://facebook.com/DFNWorldwide',
-  linkedin:      'https://www.linkedin.com/in/suavemelodies',
+  linkedin:      'https://www.linkedin.com/in/suave-melodies-00b02739b?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   github:        'https://github.com/dfnworldwide',
 
   // ── MUSIC ──  (update when live on platforms)
